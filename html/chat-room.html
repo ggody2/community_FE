@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat</title>
+    <link
+        rel="stylesheet"
+        href="../css/chat-room.css"
+        crossorigin="anonymous"
+    />
+</head>
+<body>
+    <div id="chat">
+        <div class="chat-header">
+            <img class="profile-img" src="">
+            <div class="user-info">
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="chat-actions">
+                <button class="action-btn">&#128222;</button>
+                <button class="action-btn">&#128172;</button>
+                <button class="action-btn">&#10060;</button>
+            </div>
+        </div>
+        <div id="messages" class="messages"></div>
+        <div class="input-container">
+            <input id="messageInput" type="text" placeholder="메세지 보내기...">
+            <button id="sendMessage">Send</button>
+        </div>
+        <button id="leaveChat" class="leave-button">종료하기</button>
+    </div>
+    <div class="background"></div>
+    <!-- Socket.io 클라이언트 라이브러리 로드 -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script type="module" src="../js/chat-room.js"></script>
+</body>
+</html>

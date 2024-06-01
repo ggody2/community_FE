@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="../css/index.css"
+            crossorigin="anonymous"
+        />
+        <title>STARTUPCODE Edu Community</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <section class="wrap">
+            <div class="write">
+                <div class="main">
+                    <h2>
+                    </h2>
+                </div>
+                <div class="controls">
+                    <select id="boardSort">
+                        <option value="created_at DESC" selected>최신순</option>
+                        <option value="created_at ASC">오래된순</option>
+                        <option value="like DESC">❤️순</option>
+                        <option value="hits DESC">조회순</option>
+                    </select>
+                    <!-- <div class="search-container">
+                        <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+                        <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    </div> -->
+                    <a href="./board-write.html" id="writeLink">게시글 작성</a>
+                </div>
+            </div>
+            <section class="boardList"></section>
+        </section>
+        <div class="background"></div>
+    </body>
+    <script src="../js/index.js" type="module"></script>
+</html>

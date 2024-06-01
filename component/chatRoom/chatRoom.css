@@ -1,0 +1,66 @@
+.chatItem {
+    display: flex;
+    flex-direction: row; /* Change to row to align image and text side by side */
+    align-items: center; /* Align items vertically centered */
+    width: 350px;
+    padding: 16px 10px;
+    border: 0;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 3px 4px 4px 0px #3c3b3b40;
+    margin-bottom: 5px; /* Ensure there is space between each chat item */
+}
+
+.chatItem .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 16px; /* Space between image and text */
+}
+
+.chatItem .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chatItem .text {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    width: calc(100% - 66px); /* Adjust width considering the image width and margin */
+}
+
+.chatItem .title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000000;
+    letter-spacing: -0.02em;
+    margin: 5px 0px;
+}
+
+.chatItem .info {
+    display: flex;
+    flex-direction: row; /* Column layout to stack elements vertically */
+    justify-content: space-between;
+    align-items: center; /* Align items vertically centered */
+    padding: 0;
+}
+
+.chatItem .info .views {
+    font-size: 15px;
+    letter-spacing: -0.02em;
+    color: rgb(92, 92, 92);
+    margin: 0; /* Reset margin for consistency */
+}
+
+.chatItem .date {
+    font-size: 12px;
+    line-height: 17px;
+    color: rgb(72, 72, 72);
+    letter-spacing: -0.02em;
+    margin: 0; /* Reset margin for consistency */
+    align-self: flex-end; /* Align date to the right */
+}

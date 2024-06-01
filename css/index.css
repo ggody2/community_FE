@@ -1,0 +1,140 @@
+@import url('./common/layout.css');
+@import url('../component/board/boardItem.css');
+@import url('../component/header/header.css');
+
+.boardList {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a grid with 2 columns */
+    grid-gap: 20px; /* Space between items */
+    padding: 15px 0;
+}
+
+.wrap {
+    width: 700px;
+    margin: 20px;
+    margin-left: 100px;
+}
+.write {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 20px;
+    width: 90%;
+}
+
+.main {
+    background-color: rgba(240, 240, 240, 0.731);;
+    width: 100%;
+    height: 160px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+.main h2 {
+    font-size: 32px; /* Increase font size for better visibility */
+    font-weight: 700; /* Bold text for emphasis */
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    color: #fff; /* White text to stand out against a colorful background */
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds depth to the text */
+    background: linear-gradient(45deg, #272626, #8e8e8e); /* Gradient text color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+    padding: 20px 0; /* Adds some padding for spacing */
+    margin: 20px auto;
+    border-radius: 15px; /* Rounds the corners of the text background */
+    display: inline-block; /* Ensures background gradient applies only to the text */
+}
+
+.userName {
+    color: #cfcfcfa8; /* Customize the color of the userName */
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial; /* Reset the gradient for this class */
+}
+
+/* 새로운 controls 클래스 추가 */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 200px;
+}
+
+.search-icon {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.search-icon:hover {
+    background-color: #bbb;
+}
+
+.search-input {
+    width: 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-container.active .search-input {
+    width: 100%;
+    opacity: 1;
+    right: auto;
+    position: relative;
+}
+
+
+.write a {
+    padding: 7px 25px;
+    border-radius: 18px;
+    background-color: #3A3A3A;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+b {
+    font-weight: 700;
+}
+
+.write a:hover {
+    background-color: #444444;
+}
+
+#boardSort {
+    width: 100px;
+    height: 35px;
+    background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 5px) center no-repeat;
+    background-size: 20px;
+    padding: 8px;
+    border-radius: 18px;
+    outline: 0 none;
+}
+
+#boardSort option {
+    background: #000000c9;
+    color: #fff;
+    padding: 3px 0;
+}
